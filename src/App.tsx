@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import KidCheckInOut from "./pages/KidCheckInOut";
