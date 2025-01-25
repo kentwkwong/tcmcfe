@@ -1,6 +1,7 @@
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import KidCheckInOut from "./pages/KidCheckInOut";
+import QrScanner from "./pages/QrScanner";
 
 const theme = createTheme({
   palette: {
@@ -13,6 +14,10 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <KidCheckInOut />
+        <br />
+        -----------------
+        <br />
+        <QrScanner />
       </ThemeProvider>
     </>
   );
