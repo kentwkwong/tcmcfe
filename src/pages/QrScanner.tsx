@@ -44,8 +44,8 @@
 
 // export default QrScanner;
 
-import React, { useState, useRef } from "react";
-import { Html5QrcodeScanner, Html5Qrcode } from "html5-qrcode";
+import { useState, useRef } from "react";
+import { Html5Qrcode } from "html5-qrcode";
 
 const QRCodeScanner = () => {
   const [cameraType, setCameraType] = useState("environment");
