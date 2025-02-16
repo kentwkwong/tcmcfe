@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import icon from "../assets/qr_center_icon.png"; // Import the icon from the assets folder
+import icon from "../assets/tcmc_128.png"; // Import the icon from the assets folder
 
 const QrGenerator: React.FC = () => {
   const [inputText, setInputText] = useState<string>(
-    "https://www.instagram.com/angel_kiss_bakery/"
+    "https://sites.google.com/tcmc.ca/tcmc"
   );
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
