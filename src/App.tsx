@@ -1,8 +1,10 @@
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import KidCheckInOut from "./pages/KidCheckInOut";
-import QrScanner from "./pages/QrScanner";
-import QRGenerator from "./pages/QrGenerator";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { UserProvider } from "./context/UseAuth";
+import Navbar from "./components/Navbar";
+import { Outlet } from "react-router-dom";
 
 const theme = createTheme({
   palette: {
@@ -13,17 +15,11 @@ const theme = createTheme({
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <KidCheckInOut />
-        <br />
-        -----------------
-        <br />
-        <QrScanner />
-        <br />
-        -----------------
-        <br />
-        <QRGenerator />
-      </ThemeProvider>
+      <UserProvider>
+        <Navbar />
+        <Outlet />
+        <ToastContainer />
+      </UserProvider>
     </>
   );
 }
