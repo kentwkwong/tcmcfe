@@ -64,7 +64,7 @@ const QRCodeScanner = () => {
     setErrorMessage("");
     setScannedResult(null);
     setCameraUsing(true);
-    const config = { fps: 10, qrbox: 250 }; // Scanner configuration
+    const config = { fps: 5, qrbox: { width: 250, height: 250 } }; // Scanner configuration
 
     Html5Qrcode.getCameras()
       .then((devices) => {
@@ -81,7 +81,8 @@ const QRCodeScanner = () => {
 
           scannerRef.current
             .start(
-              devices[0].id,
+              //devices[0].id,
+              { facingMode: "environment" },
               config,
               (decodedText) => {
                 setScannedResult(decodedText);
